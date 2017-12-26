@@ -2,7 +2,7 @@
 
 namespace App\Components\Hello;
 
-use App\interfaces\ComponentInterface;
+use App\Interfaces\ComponentInterface;
 
 class Controller implements ComponentInterface
 {
@@ -14,7 +14,7 @@ class Controller implements ComponentInterface
     public function render()
     {
       extract($this->parameters);
-      
+
       require 'Hello.phtml';
     }
 

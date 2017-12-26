@@ -9,8 +9,8 @@ class ConfigProvider
 
     private function __construct()
     {
-        $defaultConf = require_once dirname(dirname(__FILE__)) . '/config/app.php';
-        $environmentConf = require_once dirname(dirname(__FILE__)) . '/config/' . $defaultConf['environment'] . '/app.php';
+        $defaultConf = require_once dirname(dirname(__FILE__)) . '/Config/app.php';
+        $environmentConf = require_once dirname(dirname(__FILE__)) . '/Config/' . $defaultConf['environment'] . '/app.php';
 
         $configs = array_merge($defaultConf, $environmentConf);
 
