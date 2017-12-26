@@ -1,0 +1,42 @@
+# v2 syntax
+version: '2'
+
+services:
+  # MySQL (5.7)
+  mysql:
+    image: ambientum/mysql:5.7
+    container_name: mvc-mysqldb-dev
+    volumes:
+      - ./storage/app/mysql:/var/lib/mysql
+    ports:
+      - "3312:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mvc
+      - MYSQL_DATABASE=mvc
+      - MYSQL_USER=mvc
+      - MYSQL_PASSWORD=mvc
+
+# PHPMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mvc-phpmyadmin-dev
+    ports:
+      - "8006:80"
+    links:
+      - mysql
+    environment:
+      PMA_ARBITRARY: 1
+      MYSQL_USER: mvc
+      MYSQL_PASSWORD: mvc
+      MYSQL_ROOT_PASSWORD: mvc
+
+  # PHP (with NGINX)
+  app:
+    image: ambientum/php
+    container_name: mvc-app-dev
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8086:80"
+    links:
+      - mysql

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MVC Structure with components.</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Required Stylesheets -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Optionals Stylesheets -->
+    <link rel="stylesheet" href="<?php assets('css/theme.css') ?>">
+  </head>
+  <body>
+    <div class="container">
+      <?php require_once 'partials/header.phtml' ?>
+      <?php require_once 'partials/sidenav.phtml' ?>
+      <main>
+        <?php require_once $view ?>
+      </main>
+      <?php require_once 'partials/footer.phtml' ?>
+    </div>
+
+    <!-- Required Scripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Optionals Scripts -->
+    <script src="<?php assets('js/main.js') ?>"></script>
+  </body>
+</html>
