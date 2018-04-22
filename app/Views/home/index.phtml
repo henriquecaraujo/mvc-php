@@ -1,3 +1,9 @@
 <div class="component-container">
-  <?php Component::render('Hello', ['componentMessage' => $this->data['controllerMessage']]); ?>
+  <?php
+  Component::render(
+      new HelloComponent([
+          'componentMessage' => $this->data['controllerMessage']
+      ])
+  ); 
+  ?>
 </div>

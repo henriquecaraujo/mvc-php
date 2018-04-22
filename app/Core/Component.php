@@ -2,15 +2,12 @@
 
 namespace App\Core;
 
+use App\Interfaces\ComponentInterface;
+
 class Component
 {
-    public static function render($name, $parameters = [])
+    public static function render(ComponentInterface $componentController)
     {
-        $path = 'App\Components\\' . $name . '\Controller';
-        $component = new $path($parameters);
-
-        $component->render();
-
-        return $component;
+        return $componentController->render();
     }
 }
