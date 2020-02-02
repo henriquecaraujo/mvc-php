@@ -3,7 +3,7 @@
 namespace App\Core;
 
 use App\Core\Config;
-use App\Libs\Services\Notification\NotificationHelper;
+use App\Libs\Helpers\Notification\NotificationHelper;
 
 class Controller
 {

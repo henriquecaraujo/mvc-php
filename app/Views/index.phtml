@@ -15,12 +15,32 @@
   </head>
   <body>
     <div class="container">
-      <?php require_once 'partials/header.phtml' ?>
-      <?php require_once 'partials/sidenav.phtml' ?>
+      <?php
+        Component::render(
+            new HeaderComponent()
+        ); 
+
+        Component::render(
+            new SidenavComponent([
+              'name' => 'Henrique Araujo',
+              'email' => 'henrique.004@hotmail.com',
+              'routes' => [
+                [
+                  'path' => 'home',
+                  'name' => 'Home',
+                  'icon' => 'home'
+                ]
+              ]
+            ])
+        ); 
+        ?>
       <main>
         <?php require_once $view ?>
       </main>
-      <?php require_once 'partials/footer.phtml' ?>
+      <?php
+        Component::render(
+            new FooterComponent()
+        ); ?>
     </div>
 
     <!-- Required Scripts -->

@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require_once '../app/bootstrap.php';
 
-use App\Libs\Services\Session\SessionHelper;
+use App\Libs\Helpers\Session\SessionHelper;
 
 SessionHelper::start();
 

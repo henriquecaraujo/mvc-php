@@ -3,14 +3,20 @@
     <li>
       <div class="user-view">
         <div class="background">
-          <img src="https://via.placeholder.com/600/600">
+          <img src="https://via.placeholder.com/300/300">
         </div>
         <a href="#!user"><img class="circle" src="https://api.adorable.io/avatars/285/abott@adorable.png"></a>
-        <a href="#!name"><span class="white-text name">John Doe</span></a>
-        <a href="#!email"><span class="white-text email">johndoe@email.com</span></a>
+        <a href="#!name"><span class="white-text name"><?php echo $name; ?></span></a>
+        <a href="#!email"><span class="white-text email"><?php echo $email; ?></span></a>
       </div>
     </li>
-    <li><a href="<?php route("home") ?>" class="waves-effect"><i class="material-icons">home</i>Home</a></li>
+
+    <?php if (isset($routes)): ?>
+      <?php foreach ($routes as $route): ?>
+        <li><a href="<?php route($route->path) ?>" class="waves-effect"><i class="material-icons"><?php echo $route->icon ?></i><?php echo $route->name ?></a></li>
+      <?php endforeach; ?>
+    <?php endif; ?>
+    
     <li><div class="divider"></div></li>
     <li><a class="subheader">Subgroup</a></li>
     <li><a class="waves-effect" href="https://github.com/henriquecaraujo" target="_blank"><i class="material-icons">group</i>/henriquecaraujo</a></li>

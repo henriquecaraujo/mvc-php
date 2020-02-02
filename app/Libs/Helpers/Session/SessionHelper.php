@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libs\Services\Session;
+namespace App\Libs\Helpers\Session;
 
 /**
  * Serviço de ajuda para algorítimos de sessão

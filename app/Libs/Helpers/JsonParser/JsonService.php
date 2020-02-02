@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libs\Services\JsonParser;
+namespace App\Libs\Helpers\JsonParser;
 
 /**
  * Controla a funções de codificação, validação e decodificação dos arquivos JSON

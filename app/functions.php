@@ -26,5 +26,5 @@ function assets($path) {
 
 function route($controller)
 {
-  echo App\Libs\Services\Redirect\RedirectHelper::url($controller);
+  echo App\Libs\Helpers\Redirect\RedirectHelper::url($controller);
 }

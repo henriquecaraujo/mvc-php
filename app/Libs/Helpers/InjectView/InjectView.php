@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libs\Services\InjectView;
+namespace App\Libs\Helpers\InjectView;
 
 /**
  * Serviço de ajuda para algorítimos de sessão

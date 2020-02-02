@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libs\Services\Redirect;
+namespace App\Libs\Helpers\Redirect;
 
 class RedirectHelper
 {
