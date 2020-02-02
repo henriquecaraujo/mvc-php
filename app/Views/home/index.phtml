@@ -1,8 +1,12 @@
 <div class="component-container">
+  <p class="flow-text">
+    <?php echo  $this->data['controllerMessage'] ?>
+  </p>
+  <hr>
   <?php
   Component::render(
       new HelloComponent([
-          'componentMessage' => $this->data['controllerMessage']
+          'componentMessage' => 'This is a message from HelloComponent'
       ])
   ); 
   ?>
