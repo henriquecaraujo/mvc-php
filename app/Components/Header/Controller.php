@@ -14,7 +14,7 @@ class Controller implements ComponentInterface
     public function render()
     {
       extract($this->parameters);
-
+      
       require 'Header.phtml';
     }
 

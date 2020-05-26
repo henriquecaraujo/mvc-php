@@ -13,7 +13,7 @@
 
     <?php if (isset($routes)): ?>
       <?php foreach ($routes as $route): ?>
-        <li><a href="<?php route($route->path) ?>" class="waves-effect"><i class="material-icons"><?php echo $route->icon ?></i><?php echo $route->name ?></a></li>
+        <li><a href="<?php route($route['path']) ?>" class="waves-effect"><i class="material-icons"><?php echo $route['icon'] ?></i><?php echo $route['name'] ?></a></li>
       <?php endforeach; ?>
     <?php endif; ?>
     

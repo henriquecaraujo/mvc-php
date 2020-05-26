@@ -17,7 +17,7 @@
     <div class="container">
       <?php
         Component::render(
-            new HeaderComponent()
+            new HeaderComponent(['message' => "a text from header component."])
         ); 
 
         Component::render(
